@@ -167,14 +167,15 @@ class App {
       activeProjectsList.addProject.bind(activeProjectsList)
     );
 	
-	static startAnalytics() {
-		const analyticsScripy = document.createElement('script');
-		analyticsScripy.src = 'assets/scripts/analytics.js';
-		analyticsScripy.defer = true;
-		document.head.append(analyticsScript);
-		
-	}
+	setTimeout(this.startAnalytics, 3000);
   }
+  
+	static startAnalytics() {
+		const analyticsScript = document.createElement('script');
+		analyticsScript.src = 'assets/scripts/analytics.js';
+		analyticsScript.defer = true;
+		document.head.append(analyticsScript);
+	}
 }
 
 App.init();
